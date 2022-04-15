@@ -4,13 +4,83 @@
 # EasyPanel
 EasyPanel is a beautiful, customizable and flexible admin panel based on Livewire for Laravel.
 
-![EasyPanel screenshots](https://easypanel.netlify.app/easypanel.png)
+![EasyPanel screenshots](https://user-images.githubusercontent.com/15362786/163543631-a6c24010-242f-4136-8083-041355e7b97f.jpg)
 
 
 ## Installation and Usage Guide:
-To see how to install EasyPanel and use it, please checkout the documentation of package:
+#### Install with composer 
+**1- Install the package and its dependencies using Composer:**
 
-[EasyPanel Document](https://easypanel.netlify.app/getting-started)
+`composer require rezaamini-ir/laravel-easypanel`
+
+
+**2- Publish package files and create tables using the Artisan command:**
+
+`php artisan panel:install`
+
+
+**3- Create laravel Auth UI with any ways you want**
+
+for example simple Laravel default auth method :
+
+`composer require laravel/ui`
+
+and then step up Auth Scaffolding (this is an example)
+
+`php artisan ui bootstrap --auth`
+
+
+**4-Edit .env file add database config on it then Migrate and serve project**
+
+`php artisan migrate`
+
+`php artisan serve`
+
+
+**5- Register new user in `http://localhost:8000/register`**
+
+
+**6- Convert user type to `admin`**
+
+`php artisan panel:add [user_id]`
+
+> change [user_id] by registerd user id
+
+**7-**
+<pre>
+composer update
+composer dump-autoload
+php artisan serve
+</pre>
+
+**8- Go to `localhost:8000/admin`. you are in easypanel. for more info visit [EasyPanel Document](https://easypanel.netlify.app)**
+
+----
+
+#### Install as a local repository
+**1- After installing laravel go to your `laravel` project and make `components` dir**
+
+**2- Clone this repository on `laravel\components`**
+
+**3- Add this to `composer.json`**
+<pre>
+"repositories": [
+    {
+        "type": "path",
+        "url": "components/laravel-easypanel"
+    }
+],
+"require": {
+    ...
+    "rezaamini-ir/laravel-easypanel": "@dev"
+}
+</pre>
+
+**4- Go to **Install with composer** step `2` and do next steps**
+
+----
+
+[EasyPanel Document](https://easypanel.netlify.app)
 
 ### Features:
 - Easy to install 🚀
